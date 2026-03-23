@@ -27,7 +27,8 @@ logging.info("Data cleaned")
 logging.info("Data validated")
 logging.info("Processing completed")
 logging.info("Health classification applied")
-logging.info("Pipeline completed successfully")
+logging.info("Pipeline executed successfully")
 
 if __name__ == "__main__":
     run_pipeline()
+    

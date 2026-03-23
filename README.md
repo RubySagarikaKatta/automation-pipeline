@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Financial Data Health Monitoring & Automation System
 
 ## 📌 Overview
@@ -67,7 +66,3 @@ Inspired by real-world financial data monitoring systems, where daily metrics ar
 
 ## 👩‍💻 Author
 Ruby Sagarika Katta
-=======
-# automation-pipeline
-This project simulates a real-world financial data monitoring system that automates data validation, processing, anomaly detection, and health classification. It reduces manual effort and improves accuracy in identifying data issues.
->>>>>>> 4a70aabfeaf9204b26cf12ad90ed4c64a78f505f
