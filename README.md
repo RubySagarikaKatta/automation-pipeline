@@ -1,31 +1,38 @@
 # Financial Data Health Monitoring & Automation System
 
 ## 📌 Overview
-This project automates the process of analyzing daily data to determine system health. It reduces manual effort by performing data validation, processing, anomaly detection, and classification.
+This project simulates a real-world financial data monitoring system that automates data validation, processing, anomaly detection, and health classification. It reduces manual effort and improves accuracy in identifying data issues.
+
+---
 
 ## 🚀 Features
-- Data cleaning and validation
-- Rolling average calculation (last 4 days)
+- Data cleaning and validation (handling missing, invalid, and negative values)
+- Rolling average calculation (last 4 data points)
 - Health classification (Green / Amber / Red)
-- Logging system for tracking pipeline execution
-- Streamlit UI for interactive data processing
+- Outlier detection using Z-score
+- Logging system for pipeline tracking
+- Interactive Streamlit dashboard
 - CSV output generation
+
+---
 
 ## 🛠️ Tech Stack
 - Python
 - Pandas
 - Streamlit
 - Logging
-- SQL (conceptual)
 
-## 📂 Project Structure
-automation-pipeline/
-├── app.py
-├── main.py
-├── modules/
-├── data/
-├── README.md
+---
 
+## 📊 System Flow
+1. Input data (CSV)
+2. Data cleaning and validation
+3. Rolling average computation
+4. Outlier detection (Z-score)
+5. Health classification
+6. Output generation and visualization
+
+---
 
 ## ▶️ How to Run
 
@@ -34,6 +41,21 @@ python main.py
 
 ### Run UI:
 streamlit run app.py
+
+## 📂 Project Structure
+automation-pipeline/
+├── app.py
+├── main.py
+├── modules/
+│   ├── cleaner.py
+│   ├── validator.py
+│   ├── processor.py
+│   ├── health.py
+│   ├── anomaly.py
+│   ├── logger.py
+├── data/
+├── README.md
+
 
 
 ## 📊 Sample Output

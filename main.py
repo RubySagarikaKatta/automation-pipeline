@@ -1,5 +1,6 @@
 from modules.cleaner import clean_data
 from modules.validator import validate_data
+from modules.anomaly import detect_outliers
 from modules.processor import calculate_rolling_avg
 from modules.health import apply_health
 from modules.logger import setup_logger
@@ -14,6 +15,7 @@ def run_pipeline():
     validated_data = validate_data(data)
     
     processed_data = calculate_rolling_avg(validated_data)
+    processed_data = detect_outliers(processed_data)
     final_data = apply_health(processed_data)
     
     final_data.to_csv("data/output.csv", index=False)
