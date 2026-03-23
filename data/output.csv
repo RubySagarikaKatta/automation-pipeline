@@ -1,0 +1,6 @@
+date,value,rolling_avg,health
+18-03-2024,100,,Unknown
+19-03-2024,110,,Unknown
+20-03-2024,95,,Unknown
+21-03-2024,105,102.5,Green
+22-03-2024,130,110.0,Amber
