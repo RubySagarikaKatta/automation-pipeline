@@ -29,8 +29,8 @@ if uploaded_file is not None:
     processed = detect_outliers(processed)
     final = apply_health(processed)
     
-    st.subheader("Processed Data")
-    st.write(final)
+    # st.subheader("Processed Data")
+    # st.write(final)
 
     st.subheader("⚠️ Detected Outliers")
 
@@ -41,8 +41,23 @@ if uploaded_file is not None:
     else:
         st.write("No outliers detected")
 
+    st.subheader("Processed Data")
+    st.write(final[['date', 'value', 'rolling_avg', 'trend_display', 'health']])
+
+
+    st.subheader("📈 Summary")
+
+    total_rows = len(final)
+    outliers_count = len(final[final['outlier'] == "Yes"])
+    red_count = len(final[final['health'].str.contains("Red")])
+
+    st.write(f"Total Records: {total_rows}")
+    st.write(f"Outliers Detected: {outliers_count}")
+    st.write(f"Critical (Red) Cases: {red_count}")
+
+
     st.download_button(
-        label="Download Output CSV",
+        label="📥 Download Processed Data",
         data=final.to_csv(index=False),
         file_name="output.csv",
         mime="text/csv"
